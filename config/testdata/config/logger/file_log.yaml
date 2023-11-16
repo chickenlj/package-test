@@ -1,0 +1,22 @@
+dubbo:
+  registries:
+    nacos:
+      timeout: 5s
+      group: dev
+      address: nacos://127.0.0.1:8848
+    zk:
+      protocol: zookeeper
+      group: test
+      address: 127.0.0.1:2181
+  logger:
+    logger:
+      level: debug
+      driver: logrus
+      format: text
+      appender: console,file
+      file:
+        name: pandora.log
+        max-size: 1
+        max-backups: 2
+        max-age: 3
+        compress: true
